@@ -39,7 +39,7 @@ document.getElementById('whatsapp-float').addEventListener('click', function(e) 
   e.preventDefault();
 
   // Número de WhatsApp internacional sin signos, ejemplo: 5491122334455
-  const phoneNumber = '542926466613';
+  const phoneNumber = '5491153143204';
 
   // Mensaje inicial opcional
   const message = encodeURIComponent('Hola! Quiero más info sobre las clases de batería acústica.');
