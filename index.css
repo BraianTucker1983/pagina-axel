@@ -105,14 +105,22 @@ main {
 .hero {
   position: relative;
   height: 100vh;
-  background-image: url('./fondo-hero-axel.png');
-  background-size: cover;
-  background-position: center center;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
+  color: white;
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* mantiene toda la imagen visible */
+  z-index: -1;
 }
 
 .hero__overlay {
