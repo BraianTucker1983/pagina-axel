@@ -1,7 +1,10 @@
 /* Reset */
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #13171C;
@@ -22,7 +25,7 @@ a:hover {
 }
 
 /* Header */
-header {
+.header {
   background: #0F1113;
   padding: 20px 30px;
   display: flex;
@@ -31,22 +34,30 @@ header {
   border-bottom: 2px solid #232c36;
   position: relative;
 }
-.logo {
+
+.header__logo {
   font-weight: 700;
   font-size: 1.5rem;
   color: #00ADB5;
   letter-spacing: 2px;
 }
-nav ul {
+
+.header__nav {}
+
+.nav__list {
   display: flex;
   gap: 25px;
   list-style: none;
 }
-nav ul li a {
+
+.nav__item {}
+
+.nav__link {
   font-weight: 500;
   font-size: 1rem;
 }
-.menu-toggle {
+
+.header__menu-toggle {
   display: none;
   background: none;
   border: none;
@@ -57,7 +68,7 @@ nav ul li a {
 
 /* Responsive Menu */
 @media (max-width: 768px) {
-  nav ul {
+  .nav__list {
     position: fixed;
     top: 70px;
     right: -100%;
@@ -71,15 +82,17 @@ nav ul li a {
     transition: right 0.3s ease;
     z-index: 1000;
   }
-  nav ul.open {
+
+  .nav__list--open {
     right: 0;
   }
-  .menu-toggle {
+
+  .header__menu-toggle {
     display: block;
   }
 }
 
-/* Main content */
+/* Main */
 main {
   flex: 1;
   padding: 60px 30px;
@@ -102,33 +115,35 @@ main {
   text-align: center;
 }
 
-.hero-overlay {
-  background-color: rgba(19, 23, 28, 0.75); /* semi transparente para mejorar legibilidad */
+.hero__overlay {
+  background-color: rgba(19, 23, 28, 0.75);
   padding: 40px 30px;
   border-radius: 15px;
-  max-width: 600px;
+  max-width: 430px;
 }
 
-.hero h1 {
+.hero__title {
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 700;
   margin-bottom: 20px;
   color: #00ADB5;
 }
 
-.hero p {
+.hero__subtitle {
   font-size: clamp(1rem, 3vw, 1.5rem);
   color: #eee;
   font-weight: 500;
 }
-/* Cards Section */
-.cards {
+
+/* Services */
+.services {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   margin-bottom: 60px;
 }
-.card {
+
+.service-card {
   background: rgba(0, 173, 181, 0.1);
   border-radius: 15px;
   padding: 20px;
@@ -139,28 +154,32 @@ main {
   text-align: center;
   transition: background 0.3s ease;
 }
-.card:hover {
+
+.service-card:hover {
   background: rgba(0, 173, 181, 0.3);
   cursor: pointer;
 }
-.card img {
+
+.service-card__image {
   width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 20px;
 }
-.card h3 {
+
+.service-card__title {
   margin-bottom: 10px;
   font-size: 1.25rem;
   color: #00ADB5;
 }
-.card p {
+
+.service-card__description {
   font-size: 1rem;
   color: #ccc;
 }
 
-/* Contact Section */
+/* Contact */
 .contact {
   background: #0F1113;
   padding: 40px 30px;
@@ -168,19 +187,22 @@ main {
   max-width: 600px;
   margin: 0 auto 80px;
 }
-.contact h2 {
+
+.contact__title {
   text-align: center;
   font-size: 2rem;
   color: #00ADB5;
   margin-bottom: 30px;
 }
-.contact form {
+
+.contact__form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.contact input,
-.contact textarea {
+
+.contact__input,
+.contact__textarea {
   padding: 15px;
   border-radius: 10px;
   border: none;
@@ -189,36 +211,50 @@ main {
   background: #22272e;
   color: #eee;
 }
-.contact button {
-  background: #00ADB5;
+
+.contact__button {
+  width: 100%;
+  padding: 15px 20px;
+  background: linear-gradient(to right, #00ADB5, #0099a1);
   border: none;
-  padding: 15px;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  border-radius: 12px;
   color: #0F1113;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 173, 181, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.contact button:hover {
-  background: #008f96;
+
+.contact__button:hover {
+  background: linear-gradient(to right, #00c9d1, #00a1a9);
+  transform: translateY(-2px);
+}
+
+.contact__button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 173, 181, 0.4);
 }
 
 /* Footer */
-footer {
+.footer {
   background: #0F1113;
   padding: 30px 20px;
   text-align: center;
   border-top: 2px solid #232c36;
   color: #ccc;
 }
-footer .social-links {
+
+.footer__social-links {
   margin: 15px 0 10px;
   display: flex;
   justify-content: center;
   gap: 30px;
 }
-footer .social-links a {
+
+.footer__icon {
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -228,38 +264,40 @@ footer .social-links a {
   font-size: 24px;
   color: #00ADB5;
   transition: background 0.3s ease, color 0.3s ease;
+  text-align: center;
 }
-footer .social-links a:hover {
+
+.footer__icon:hover {
   background: #00ADB5;
   color: #0F1113;
 }
-footer .social-links a.facebook::before {
+
+.footer__icon--facebook::before {
   content: "📘";
   display: inline-block;
   line-height: 48px;
 }
-footer .social-links a.whatsapp::before {
+
+.footer__icon--whatsapp::before {
   content: "📱";
   display: inline-block;
   line-height: 48px;
 }
-footer .social-links a.instagram::before {
+
+.footer__icon--instagram::before {
   content: "📸";
   display: inline-block;
   line-height: 48px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
+.footer__brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #00ADB5;
 }
 
-#whatsapp-float {
+/* WhatsApp Button */
+.whatsapp-float {
   position: fixed;
   width: 60px;
   height: 60px;
@@ -276,11 +314,22 @@ footer .social-links a.instagram::before {
   transition: background-color 0.3s ease;
 }
 
-#whatsapp-float:hover {
+.whatsapp-float:hover {
   background-color: #1ebe57;
 }
 
-#whatsapp-float img {
+.whatsapp-float img {
   width: 35px;
   height: 35px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .hero__title {
+    font-size: 2.2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
 }

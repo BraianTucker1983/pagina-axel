@@ -8,72 +8,73 @@
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">Axel Tucker</div>
-    <nav>
-      <ul>
-        <li><a href="#hero">Inicio</a></li>
-        <li><a href="#services">Servicios</a></li>
-        <li><a href="#contact">Contacto</a></li>
+  <header class="header">
+    <div class="header__logo">Axel Tucker</div>
+    <nav class="header__nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#hero" class="nav__link">Inicio</a></li>
+        <li class="nav__item"><a href="#services" class="nav__link">Servicios</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
       </ul>
     </nav>
-    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <button class="header__menu-toggle" aria-label="Abrir menú">☰</button>
   </header>
 
   <main>
     <section id="hero" class="hero">
-  <div class="hero-overlay">
-    <h1>Aprendé Batería Acústica</h1>
-    <p>Clases personalizadas para todos los niveles. ¡Comenzá a tocar hoy!</p>
-  </div>
-</section>
+      <div class="hero__overlay">
+        <h1 class="hero__title">Aprendé Batería </h1>
+        <p class="hero__subtitle">Clases personalizadas para todos los niveles. ¡Comenzá a tocar hoy!</p>
+      </div>
+    </section>
 
-    <section id="services" class="cards">
-      <article class="card">
-        <img src="https://via.placeholder.com/100" alt="Diseño Web" />
-        <h3>Diseño Web</h3>
-        <p>Creación de páginas web modernas, responsivas y rápidas.</p>
+    <section id="services" class="services">
+      <article class="service-card">
+        <img src="./imagen de rudimentos.png" alt="Diseño Web" class="service-card__image" />
+        <h3 class="service-card__title">Rudimentos</h3>
+        <p class="service-card__description">Creación de páginas web modernas, responsivas y rápidas.</p>
       </article>
-      <article class="card">
-        <img src="https://via.placeholder.com/100" alt="Marketing Digital" />
-        <h3>Marketing Digital</h3>
-        <p>Estrategias efectivas para aumentar tu presencia online.</p>
+      <article class="service-card">
+        <img src="./image ritmos.jpg" alt="Marketing Digital" class="service-card__image" />
+        <h3 class="service-card__title">Diferentes estilos</h3>
+        <p class="service-card__description">Estrategias efectivas para aumentar tu presencia online.</p>
       </article>
-      <article class="card">
-        <img src="https://via.placeholder.com/100" alt="Consultoría IT" />
-        <h3>Consultoría IT</h3>
-        <p>Asesoría técnica para optimizar tus sistemas y procesos.</p>
+      <article class="service-card">
+        <img src="https://via.placeholder.com/100" alt="Consultoría IT" class="service-card__image" />
+        <h3 class="service-card__title">Consultoría IT</h3>
+        <p class="service-card__description">Asesoría técnica para optimizar tus sistemas y procesos.</p>
       </article>
-      <article class="card">
-        <img src="https://via.placeholder.com/100" alt="Soporte Técnico" />
-        <h3>Soporte Técnico</h3>
-        <p>Atención y resolución rápida para tus problemas tecnológicos.</p>
+      <article class="service-card">
+        <img src="https://via.placeholder.com/100" alt="Soporte Técnico" class="service-card__image" />
+        <h3 class="service-card__title">Soporte Técnico</h3>
+        <p class="service-card__description">Atención y resolución rápida para tus problemas tecnológicos.</p>
       </article>
     </section>
 
     <section id="contact" class="contact">
-      <h2>Contacto</h2>
-      <form id="contact-form">
-        <input type="text" id="name" placeholder="Nombre" required />
-        <input type="email" id="email" placeholder="Email" required />
-        <textarea id="message" placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar</button>
+      <h2 class="contact__title">Contacto</h2>
+      <form id="contact-form" class="contact__form">
+        <input type="text" id="name" class="contact__input" placeholder="Nombre" required />
+        <input type="email" id="email" class="contact__input" placeholder="Email" required />
+        <textarea id="message" class="contact__textarea" placeholder="Mensaje" required></textarea>
+        <button type="submit" class="contact__button">Enviar</button>
       </form>
     </section>
   </main>
 
-  <footer>
-    <div>Axel Tucker</div>
-    <div class="social-links">
-      <a href="https://facebook.com" target="_blank" rel="noopener" class="facebook" aria-label="Facebook"></a>
-      <a href="https://wa.me/123456789" target="_blank" rel="noopener" class="whatsapp" aria-label="WhatsApp"></a>
-      <a href="https://instagram.com" target="_blank" rel="noopener" class="instagram" aria-label="Instagram"></a>
+  <footer class="footer">
+    <div class="footer__brand">Axel Tucker</div>
+    <div class="footer__social-links">
+      <a href="https://facebook.com" target="_blank" rel="noopener" class="footer__icon footer__icon--facebook" aria-label="Facebook"></a>
+      <a href="https://wa.me/5491153143204" target="_blank" rel="noopener" class="footer__icon footer__icon--whatsapp" aria-label="WhatsApp"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="footer__icon footer__icon--instagram" aria-label="Instagram"></a>
     </div>
   </footer>
 
-  <a href="#" id="whatsapp-float" target="_blank" aria-label="Chat WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-</a>
+  <a href="#" id="whatsapp-float" class="whatsapp-float" target="_blank" aria-label="Chat WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
   <script src="index.js"></script>
 </body>
 </html>
